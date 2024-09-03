@@ -36,10 +36,6 @@ android {
     }
 }
 
-repositories {
-    google()
-    mavenCentral()
-}
 
 dependencies {
     // Appium Java Client dependency only, no separate Selenium dependencies
