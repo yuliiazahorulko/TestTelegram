@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.myapplication"
-        minSdk = 21
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -39,7 +39,7 @@ android {
 
 dependencies {
     // Appium Java Client dependency only, no separate Selenium dependencies
-    implementation("io.appium:java-client:7.3.0")
+    testImplementation("io.appium:java-client:7.3.0")
 
     // JUnit 5 dependencies
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.10.0")
@@ -48,9 +48,9 @@ dependencies {
     // AndroidX Test dependencies
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
+
+    implementation("com.google.android.material:material:1.5.0")
+
 }
 
-// Configure the test task to use JUnit 5
-tasks.withType<Test> {
-    useJUnitPlatform()
-}
+
